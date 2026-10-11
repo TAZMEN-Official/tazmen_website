@@ -25,3 +25,8 @@
     max-width:410px; 
     height: auto;
 }
+
+.tazmen_content_list li
+{
+    margin: 20px 0px;
+}
