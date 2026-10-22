@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title> TAZMEN™ News</title>
+	<link id="page_theme" rel="stylesheet" href="../../css/news.css">
+	<link id="shared_theme" rel="stylesheet" href="../../css/shared.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script>
+        const savedTheme = localStorage.getItem("tazmen-theme");
+        if (savedTheme === "white") {
+            document.getElementById("page_theme").setAttribute("href", "../../css/news_w.css");
+            document.getElementById("shared_theme").setAttribute("href", "../../css/shared_w.css");
+        }
+    </script>
+	<script>
+		$(document).ready(function() {
+			$("#theme_button").click(function() {
+				const sharedLink = $("head link#shared_theme");
+				const pageLink = $("head link#page_theme");
+
+				// Simple condition: Check if it's currently using the white theme file
+				if (sharedLink.attr("href") === "../../css/shared_w.css") {
+					// Revert BOTH to default themes
+					sharedLink.attr("href", "../../css/shared.css");
+					pageLink.attr("href", "../../css/news.css");
+				} else {
+					// Activate BOTH white themes
+					sharedLink.attr("href", "../../css/shared_w.css");
+					pageLink.attr("href", "../../css/news_w.css");
+				}
+				if (sharedLink.attr("href") === "../../css/shared_w.css") {
+					localStorage.setItem("tazmen-theme", "white");
+				} else {
+					localStorage.setItem("tazmen-theme", "dark");
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div id="action_bar">
+		<div class="width_container">
+			<div class="tazmen_actionbar_button"> <a href="../../" class="taz_inbutton">TAZMEN™</a> </div>
+			<div class="tazmen_actionbar_button" id="tazmen_actionbar_current_button"> <a href="" class="taz_inbutton">TAZMEN™ News</a> </div>
+			<div class="tazmen_actionbar_button"> <a href="../tazmen_blog" class="taz_inbutton">TAZMEN™ Blog</a> </div>
+			<div class="tazmen_actionbar_button"> <a href="../tickets" class="taz_inbutton">BUY TICKETS</a> </div>
+			<div class="tazmen_actionbar_button"> <a href="../albatman_repairs" class="taz_inbutton">Albatman Repairs</a> </div>
+			<button class="tazmen_actionbar_button" id="theme_button"> </button>	
+		</div>
+	</div>
+
+	<footer class="tazmen_footer"> <p> THE OFFICIAL REAL AUTHENTIC TAZMEN™ WEBSITE </p> <br> <div id="tazmen_footer_linkbox"> <a target = "_blank" href ="https://www.youtube.com/@Tazmen_Official"> <img class ="image_button" src="../../resources/images/youtube-brands-solid-red.png" onMouseOver="this.src='../../resources/images/youtube-brands-solid.png'" onMouseOut="this.src='../../resources/images/youtube-brands-solid-red.png'" alt="TAZMEN YOUTUBE BUTTON THAT TAKES YOU TO THE TAZMEN CHANNEL"> </a> </div> </footer>
+
+</body>

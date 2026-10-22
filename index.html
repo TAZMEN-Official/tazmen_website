@@ -3,18 +3,51 @@
 
 <head>
 	<title> TAZMEN™ Official</title>
-	<link rel="stylesheet" href="css/home.css">
-	<link rel="stylesheet" href="css/shared.css">
+	<link id="page_theme" rel="stylesheet" href="css/home.css">
+	<link id="shared_theme" rel="stylesheet" href="css/shared.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script>
+        const savedTheme = localStorage.getItem("tazmen-theme");
+        if (savedTheme === "white") {
+            document.getElementById("page_theme").setAttribute("href", "css/home_w.css");
+            document.getElementById("shared_theme").setAttribute("href", "css/shared_w.css");
+        }
+    </script>
+	<script>
+		$(document).ready(function() {
+			$("#theme_button").click(function() {
+				const sharedLink = $("head link#shared_theme");
+				const pageLink = $("head link#page_theme");
+
+				// Simple condition: Check if it's currently using the white theme file
+				if (sharedLink.attr("href") === "css/shared_w.css") {
+					// Revert BOTH to default themes
+					sharedLink.attr("href", "css/shared.css");
+					pageLink.attr("href", "css/home.css");
+				} else {
+					// Activate BOTH white themes
+					sharedLink.attr("href", "css/shared_w.css");
+					pageLink.attr("href", "css/home_w.css");
+				}
+				if (sharedLink.attr("href") === "css/shared_w.css") {
+					localStorage.setItem("tazmen-theme", "white");
+				} else {
+					localStorage.setItem("tazmen-theme", "dark");
+				}
+			});
+		});
+	</script>
 </head>
 
 <body>
 	<div id="action_bar">
 		<div class="width_container">
 			<div class="tazmen_actionbar_button" id="tazmen_actionbar_current_button"> <a href="" class="taz_inbutton">TAZMEN™</a> </div>
-			<div class="tazmen_actionbar_button"> <a href="tazmen_news" class="taz_inbutton">TAZMEN™ News</a> </div>
-			<div class="tazmen_actionbar_button"> <a href="tazmen_blog" class="taz_inbutton">TAZMEN™ Blog</a> </div>
-			<div class="tazmen_actionbar_button"> <a href="tickets" class="taz_inbutton">BUY TICKETS</a> </div>
-			<div class="tazmen_actionbar_button"> <a href="albatman_repairs" class="taz_inbutton">Albatman Repairs</a> </div>	
+			<div class="tazmen_actionbar_button"> <a href="pages/tazmen_news" class="taz_inbutton">TAZMEN™ News</a> </div>
+			<div class="tazmen_actionbar_button"> <a href="pages/tazmen_blog" class="taz_inbutton">TAZMEN™ Blog</a> </div>
+			<div class="tazmen_actionbar_button"> <a href="pages/tickets" class="taz_inbutton">BUY TICKETS</a> </div>
+			<div class="tazmen_actionbar_button"> <a href="pages/albatman_repairs" class="taz_inbutton">Albatman Repairs</a> </div>	
+			<button class="tazmen_actionbar_button" id="theme_button"> </button>
 		</div>
 	</div>
 	<div class="width_container">
@@ -52,6 +85,8 @@
 				<h2><i>&nbsp;&nbsp; secret merch</i></h2>
 				<ul>
 				<li> ihsous xrhsths bondage kit - 45$ </li>
+				<li> fotwink bathwater sample (2 mL) - 49$ </li>
+				<li> fotwink bathwater 50L - 24,975$ </li>
 				</ul>
 		</div>
 		<div class="content_box">
@@ -73,3 +108,5 @@
 </body>
 
 </html>
+
+

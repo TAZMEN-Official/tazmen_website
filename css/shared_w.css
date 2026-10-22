@@ -1,0 +1,123 @@
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+html, body {
+    margin: 0;
+}
+
+.width_container 
+{
+    display: flex;
+    align-items: flex-start;
+}
+
+#action_bar 
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    border: 3px solid rgb(155, 25, 155);
+    border-top: none;
+    height: 45px;
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+#tazmen_actionbar_current_button 
+{
+    height: 30px;
+    width: 180px;
+    border: 3px solid rgb(155, 25, 155);
+    background-color: rgb(122, 237, 245);
+    text-align: center;
+    box-shadow: 2px 2px rgb(97, 3, 151);
+}
+
+.tazmen_actionbar_button 
+{
+    height: 30px;
+    width: 180px;
+    margin-left: 6px;
+    margin-right: 6px;
+    border: 3px solid rgb(155, 25, 155);
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    box-shadow: 2px 2px rgb(97, 3, 151);
+}
+
+.tazmen_actionbar_button:hover 
+{
+    background-color: rgb(122, 237, 245);
+}
+
+.taz_inbutton 
+{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    line-height: 30px;
+    font-size: 20px;
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+html 
+{
+    background-color: rgb(255, 255, 255);
+    overflow-y: scroll;
+}
+
+.tazmen_footer 
+{
+    margin-top:auto;
+    right: 0;
+    left: 0;
+    text-align: center;
+    border: 3px solid rgb(155, 25, 155);
+    border-bottom: none;
+    background-color: rgb(255, 255, 255);
+}
+
+.tazmen_footer p 
+{
+    margin-top: 5px;
+    margin-bottom: -20px;
+}
+
+#tazmen_footer_linkbox 
+{
+    display: flex;
+    justify-content: center;
+}
+
+
+.image_button 
+{
+    max-width: 50px;
+    height: auto;    
+}
+
+#theme_button
+{
+    margin-left: auto;            
+    margin-right: 15px;     
+    background-image: url('../resources/images/black-crescent-moon-png-1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 30px;
+    width: 30px;
+}
+
+#theme_button:hover 
+{
+    background-image: url('../resources/images/black-crescent-moon-png-1_invert.png');
+}

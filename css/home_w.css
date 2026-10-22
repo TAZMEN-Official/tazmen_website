@@ -1,0 +1,32 @@
+
+.content_box {
+    margin: 15px;
+    margin-top: 80px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    width: 400px;
+    border: 10px solid rgb(121, 10, 78);
+}
+
+.box_title 
+{
+    font-size:20px;
+    text-align: center;
+}
+
+#tazmen_release_text 
+{
+    color:rgb(0, 0, 0);
+    font-style: bold;
+}
+
+#tazmen_release_image img
+{
+    max-width:410px; 
+    height: auto;
+}
+
+.tazmen_content_list li
+{
+    margin: 20px 0px;
+}
