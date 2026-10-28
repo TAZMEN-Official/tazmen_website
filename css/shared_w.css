@@ -107,17 +107,18 @@ html
 
 #theme_button
 {
-    margin-left: auto;            
-    margin-right: 15px;     
-    background-image: url('../resources/images/black-crescent-moon-png-1.png');
+    margin-left: auto;              
+    background-image: url('../resources/images/hooded_spongebob.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    height: 30px;
-    width: 30px;
+    margin-right: 7px; 
+    margin-top: -5px;
+    height: 45px;
+    width: 45px;
 }
 
 #theme_button:hover 
 {
-    background-image: url('../resources/images/black-crescent-moon-png-1_invert.png');
+    background-image: url('../resources/images/hooded_spongebob_invert.jpg');
 }
